@@ -1,0 +1,1044 @@
+EESchema Schematic File Version 4
+LIBS:CBR015-0056_QUAD_MAP-CMP_SENSOR_PCB-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "QUAD MAP-CMP SENSOR PCB"
+Date "26-11-2020"
+Rev "00"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 "T Naughton"
+Comment4 "CBR015-0056"
+$EndDescr
+Text GLabel 9150 5250 0    50   Input ~ 0
+CMP_SIG
+Wire Wire Line
+	9150 5250 9400 5250
+$Comp
+L power:Earth #PWR0101
+U 1 1 5E3D526B
+P 8950 5400
+F 0 "#PWR0101" H 8950 5150 50  0001 C CNN
+F 1 "Earth" H 8950 5250 50  0001 C CNN
+F 2 "" H 8950 5400 50  0001 C CNN
+F 3 "~" H 8950 5400 50  0001 C CNN
+	1    8950 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0102
+U 1 1 5E3D52AB
+P 9100 5600
+F 0 "#PWR0102" H 9100 5450 50  0001 C CNN
+F 1 "+5V" H 9115 5773 50  0000 C CNN
+F 2 "" H 9100 5600 50  0001 C CNN
+F 3 "" H 9100 5600 50  0001 C CNN
+	1    9100 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 5450 9250 5450
+Wire Wire Line
+	9250 5450 9250 5600
+Wire Wire Line
+	9250 5600 9100 5600
+Wire Wire Line
+	9400 5350 8950 5350
+Wire Wire Line
+	8950 5350 8950 5400
+Text Notes 9100 6000 0    50   ~ 0
+HARNESS CONNECTOR
+Text Notes 1300 2200 0    50   ~ 0
+CYL #1 PRESSURE SENSOR
+Text Notes 4950 6750 0    50   ~ 0
+COMPARATOR
+$Comp
+L User_Library:LM397 U1
+U 1 1 5E6CF25C
+P 5150 6050
+F 0 "U1" H 5350 6300 50  0000 L CNN
+F 1 "LM397" H 5350 6200 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-5_HandSoldering" H 5150 6050 50  0001 C CNN
+F 3 "" H 5150 6050 50  0001 C CNN
+	1    5150 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0103
+U 1 1 5E6CF2EE
+P 5150 6450
+F 0 "#PWR0103" H 5150 6200 50  0001 C CNN
+F 1 "Earth" H 5150 6300 50  0001 C CNN
+F 2 "" H 5150 6450 50  0001 C CNN
+F 3 "~" H 5150 6450 50  0001 C CNN
+	1    5150 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0104
+U 1 1 5E6CF323
+P 5150 5500
+F 0 "#PWR0104" H 5150 5350 50  0001 C CNN
+F 1 "+5V" H 5165 5673 50  0000 C CNN
+F 2 "" H 5150 5500 50  0001 C CNN
+F 3 "" H 5150 5500 50  0001 C CNN
+	1    5150 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 5500 5150 5600
+Wire Wire Line
+	5150 6400 5150 6450
+Text GLabel 5800 6050 2    50   Input ~ 0
+CMP_SIG
+Wire Wire Line
+	5650 6050 5700 6050
+$Comp
+L Device:R R1
+U 1 1 5E6CF6EA
+P 5700 5800
+F 0 "R1" H 5770 5846 50  0000 L CNN
+F 1 "10K" H 5770 5755 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5630 5800 50  0001 C CNN
+F 3 "~" H 5700 5800 50  0001 C CNN
+	1    5700 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 5650 5700 5600
+Wire Wire Line
+	5700 5600 5150 5600
+Connection ~ 5150 5600
+Wire Wire Line
+	5150 5600 5150 5700
+Wire Wire Line
+	5700 5950 5700 6050
+Connection ~ 5700 6050
+Wire Wire Line
+	5700 6050 5800 6050
+Text GLabel 4500 6200 0    50   Input ~ 0
+MAP1_SIG
+Wire Wire Line
+	4500 6200 4750 6200
+Text GLabel 4500 5900 0    50   Input ~ 0
+VREF
+Wire Wire Line
+	4500 5900 4750 5900
+$Comp
+L Sensor_Pressure:MPXA6115A U2
+U 1 1 5E6E56FF
+P 1850 1450
+F 0 "U2" H 1420 1496 50  0000 R CNN
+F 1 "MPXA6115A" H 1420 1405 50  0000 R CNN
+F 2 "SamacSys_Parts:98ASB17757C" H 1350 1100 50  0001 C CNN
+F 3 "http://www.nxp.com/files/sensors/doc/data_sheet/MPXA6115A.pdf" H 1850 2050 50  0001 C CNN
+	1    1850 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0105
+U 1 1 5E6E5819
+P 1850 1900
+F 0 "#PWR0105" H 1850 1650 50  0001 C CNN
+F 1 "Earth" H 1850 1750 50  0001 C CNN
+F 2 "" H 1850 1900 50  0001 C CNN
+F 3 "~" H 1850 1900 50  0001 C CNN
+	1    1850 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 1750 1850 1850
+$Comp
+L power:+5V #PWR0106
+U 1 1 5E6E59E7
+P 1850 950
+F 0 "#PWR0106" H 1850 800 50  0001 C CNN
+F 1 "+5V" H 1865 1123 50  0000 C CNN
+F 2 "" H 1850 950 50  0001 C CNN
+F 3 "" H 1850 950 50  0001 C CNN
+	1    1850 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5E6E5A9C
+P 1500 1000
+F 0 "C1" V 1271 1000 50  0000 C CNN
+F 1 "100nF" V 1362 1000 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1500 1000 50  0001 C CNN
+F 3 "~" H 1500 1000 50  0001 C CNN
+	1    1500 1000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:Earth #PWR0107
+U 1 1 5E6E5B44
+P 1300 1050
+F 0 "#PWR0107" H 1300 800 50  0001 C CNN
+F 1 "Earth" H 1300 900 50  0001 C CNN
+F 2 "" H 1300 1050 50  0001 C CNN
+F 3 "~" H 1300 1050 50  0001 C CNN
+	1    1300 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 1050 1300 1000
+Wire Wire Line
+	1300 1000 1400 1000
+Wire Wire Line
+	1600 1000 1850 1000
+Wire Wire Line
+	1850 1000 1850 950 
+Wire Wire Line
+	1850 1000 1850 1150
+Connection ~ 1850 1000
+Text GLabel 2850 1450 2    50   Input ~ 0
+MAP1_SIG
+$Comp
+L Device:C_Small C2
+U 1 1 5E6E639D
+P 2300 1650
+F 0 "C2" H 2208 1604 50  0000 R CNN
+F 1 "47pF" H 2208 1695 50  0000 R CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2300 1650 50  0001 C CNN
+F 3 "~" H 2300 1650 50  0001 C CNN
+	1    2300 1650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5E6E646A
+P 2700 1650
+F 0 "R2" H 2770 1696 50  0000 L CNN
+F 1 "51K" H 2770 1605 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2630 1650 50  0001 C CNN
+F 3 "~" H 2700 1650 50  0001 C CNN
+	1    2700 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 1450 2300 1450
+Wire Wire Line
+	2700 1500 2700 1450
+Connection ~ 2700 1450
+Wire Wire Line
+	2700 1450 2850 1450
+Wire Wire Line
+	2300 1550 2300 1450
+Connection ~ 2300 1450
+Wire Wire Line
+	2300 1450 2700 1450
+Wire Wire Line
+	2300 1750 2300 1850
+Wire Wire Line
+	2300 1850 1850 1850
+Connection ~ 1850 1850
+Wire Wire Line
+	1850 1850 1850 1900
+Wire Wire Line
+	2700 1850 2300 1850
+Connection ~ 2300 1850
+Wire Wire Line
+	2700 1800 2700 1850
+Text Notes 9000 2250 0    50   ~ 0
+REF VOLTAGE DIVIDER
+Text GLabel 9700 1500 2    50   Input ~ 0
+VREF
+$Comp
+L power:Earth #PWR0108
+U 1 1 5E6EA952
+P 9400 1950
+F 0 "#PWR0108" H 9400 1700 50  0001 C CNN
+F 1 "Earth" H 9400 1800 50  0001 C CNN
+F 2 "" H 9400 1950 50  0001 C CNN
+F 3 "~" H 9400 1950 50  0001 C CNN
+	1    9400 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0109
+U 1 1 5E6EAF71
+P 9400 1050
+F 0 "#PWR0109" H 9400 900 50  0001 C CNN
+F 1 "+5V" H 9415 1223 50  0000 C CNN
+F 2 "" H 9400 1050 50  0001 C CNN
+F 3 "" H 9400 1050 50  0001 C CNN
+	1    9400 1050
+	1    0    0    -1  
+$EndComp
+Text GLabel 9150 5700 0    50   Input ~ 0
+MAP_SIG
+$Comp
+L Connector_Generic:Conn_01x04 J2
+U 1 1 5E780502
+P 9600 3300
+F 0 "J2" H 9680 3292 50  0000 L CNN
+F 1 "DEBUG_CONN" H 9680 3201 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 9600 3300 50  0001 C CNN
+F 3 "~" H 9600 3300 50  0001 C CNN
+	1    9600 3300
+	1    0    0    -1  
+$EndComp
+Text GLabel 9250 3200 0    50   Input ~ 0
+MAP1_SIG
+Text GLabel 9250 3300 0    50   Input ~ 0
+CMP_SIG
+Text GLabel 9250 3400 0    50   Input ~ 0
+VREF
+$Comp
+L power:Earth #PWR0110
+U 1 1 5E7805DE
+P 9300 3550
+F 0 "#PWR0110" H 9300 3300 50  0001 C CNN
+F 1 "Earth" H 9300 3400 50  0001 C CNN
+F 2 "" H 9300 3550 50  0001 C CNN
+F 3 "~" H 9300 3550 50  0001 C CNN
+	1    9300 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 3500 9300 3500
+Wire Wire Line
+	9300 3500 9300 3550
+Wire Wire Line
+	9400 3400 9250 3400
+Wire Wire Line
+	9250 3300 9400 3300
+Wire Wire Line
+	9400 3200 9250 3200
+Text Notes 9100 3900 0    50   ~ 0
+DEBUG CONNECTOR
+$Comp
+L Connector_Generic:Conn_01x04 J1
+U 1 1 5E7834C4
+P 9600 5350
+F 0 "J1" H 9680 5342 50  0000 L CNN
+F 1 "B04B-JWPF-SK-R" H 9680 5251 50  0000 L CNN
+F 2 "User Libraries:JST_B04B-JWPF-SK-R" H 9600 5350 50  0001 C CNN
+F 3 "~" H 9600 5350 50  0001 C CNN
+	1    9600 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 5550 9350 5550
+Wire Wire Line
+	9350 5550 9350 5700
+Wire Wire Line
+	9150 5700 9350 5700
+$Comp
+L power:Earth #PWR0111
+U 1 1 5FC02771
+P 9300 4650
+F 0 "#PWR0111" H 9300 4400 50  0001 C CNN
+F 1 "Earth" H 9300 4500 50  0001 C CNN
+F 2 "" H 9300 4650 50  0001 C CNN
+F 3 "~" H 9300 4650 50  0001 C CNN
+	1    9300 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 4600 9300 4600
+Wire Wire Line
+	9300 4600 9300 4650
+Text GLabel 9250 4200 0    50   Input ~ 0
+MAP1_SIG
+Text GLabel 9250 4300 0    50   Input ~ 0
+MAP2_SIG
+Text GLabel 9250 4400 0    50   Input ~ 0
+MAP3_SIG
+Text GLabel 9250 4500 0    50   Input ~ 0
+MAP4_SIG
+Wire Wire Line
+	9250 4200 9400 4200
+Wire Wire Line
+	9250 4300 9400 4300
+Wire Wire Line
+	9250 4400 9400 4400
+Wire Wire Line
+	9250 4500 9400 4500
+Text Notes 1300 3950 0    50   ~ 0
+CYL #2 PRESSURE SENSOR
+$Comp
+L Sensor_Pressure:MPXA6115A U3
+U 1 1 5FC06B4E
+P 1800 3200
+F 0 "U3" H 1370 3246 50  0000 R CNN
+F 1 "MPXA6115A" H 1370 3155 50  0000 R CNN
+F 2 "SamacSys_Parts:98ASB17757C" H 1300 2850 50  0001 C CNN
+F 3 "http://www.nxp.com/files/sensors/doc/data_sheet/MPXA6115A.pdf" H 1800 3800 50  0001 C CNN
+	1    1800 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 3500 1800 3600
+$Comp
+L Device:C_Small C3
+U 1 1 5FC06B61
+P 1450 2750
+F 0 "C3" V 1221 2750 50  0000 C CNN
+F 1 "100nF" V 1312 2750 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1450 2750 50  0001 C CNN
+F 3 "~" H 1450 2750 50  0001 C CNN
+	1    1450 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L power:Earth #PWR0114
+U 1 1 5FC06B67
+P 1250 2800
+F 0 "#PWR0114" H 1250 2550 50  0001 C CNN
+F 1 "Earth" H 1250 2650 50  0001 C CNN
+F 2 "" H 1250 2800 50  0001 C CNN
+F 3 "~" H 1250 2800 50  0001 C CNN
+	1    1250 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 2800 1250 2750
+Wire Wire Line
+	1250 2750 1350 2750
+Wire Wire Line
+	1550 2750 1800 2750
+Wire Wire Line
+	1800 2750 1800 2700
+Wire Wire Line
+	1800 2750 1800 2900
+Connection ~ 1800 2750
+Text GLabel 2800 3200 2    50   Input ~ 0
+MAP2_SIG
+$Comp
+L Device:C_Small C4
+U 1 1 5FC06B74
+P 2250 3400
+F 0 "C4" H 2158 3354 50  0000 R CNN
+F 1 "47pF" H 2158 3445 50  0000 R CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2250 3400 50  0001 C CNN
+F 3 "~" H 2250 3400 50  0001 C CNN
+	1    2250 3400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5FC06B7A
+P 2650 3400
+F 0 "R3" H 2720 3446 50  0000 L CNN
+F 1 "51K" H 2720 3355 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2580 3400 50  0001 C CNN
+F 3 "~" H 2650 3400 50  0001 C CNN
+	1    2650 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 3200 2250 3200
+Wire Wire Line
+	2650 3250 2650 3200
+Connection ~ 2650 3200
+Wire Wire Line
+	2650 3200 2800 3200
+Wire Wire Line
+	2250 3300 2250 3200
+Connection ~ 2250 3200
+Wire Wire Line
+	2250 3200 2650 3200
+Wire Wire Line
+	2250 3500 2250 3600
+Wire Wire Line
+	2250 3600 1800 3600
+Connection ~ 1800 3600
+Wire Wire Line
+	1800 3600 1800 3650
+Wire Wire Line
+	2650 3600 2250 3600
+Connection ~ 2250 3600
+Wire Wire Line
+	2650 3550 2650 3600
+Text Notes 1250 5650 0    50   ~ 0
+CYL #3 PRESSURE SENSOR
+$Comp
+L Sensor_Pressure:MPXA6115A U4
+U 1 1 5FC0847D
+P 1800 4900
+F 0 "U4" H 1370 4946 50  0000 R CNN
+F 1 "MPXA6115A" H 1370 4855 50  0000 R CNN
+F 2 "SamacSys_Parts:98ASB17757C" H 1300 4550 50  0001 C CNN
+F 3 "http://www.nxp.com/files/sensors/doc/data_sheet/MPXA6115A.pdf" H 1800 5500 50  0001 C CNN
+	1    1800 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0115
+U 1 1 5FC08483
+P 1800 5350
+F 0 "#PWR0115" H 1800 5100 50  0001 C CNN
+F 1 "Earth" H 1800 5200 50  0001 C CNN
+F 2 "" H 1800 5350 50  0001 C CNN
+F 3 "~" H 1800 5350 50  0001 C CNN
+	1    1800 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 5200 1800 5300
+$Comp
+L power:+5V #PWR0116
+U 1 1 5FC0848A
+P 1800 4400
+F 0 "#PWR0116" H 1800 4250 50  0001 C CNN
+F 1 "+5V" H 1815 4573 50  0000 C CNN
+F 2 "" H 1800 4400 50  0001 C CNN
+F 3 "" H 1800 4400 50  0001 C CNN
+	1    1800 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C5
+U 1 1 5FC08490
+P 1450 4450
+F 0 "C5" V 1221 4450 50  0000 C CNN
+F 1 "100nF" V 1312 4450 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1450 4450 50  0001 C CNN
+F 3 "~" H 1450 4450 50  0001 C CNN
+	1    1450 4450
+	0    1    1    0   
+$EndComp
+$Comp
+L power:Earth #PWR0117
+U 1 1 5FC08496
+P 1250 4500
+F 0 "#PWR0117" H 1250 4250 50  0001 C CNN
+F 1 "Earth" H 1250 4350 50  0001 C CNN
+F 2 "" H 1250 4500 50  0001 C CNN
+F 3 "~" H 1250 4500 50  0001 C CNN
+	1    1250 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 4500 1250 4450
+Wire Wire Line
+	1250 4450 1350 4450
+Wire Wire Line
+	1550 4450 1800 4450
+Wire Wire Line
+	1800 4450 1800 4400
+Wire Wire Line
+	1800 4450 1800 4600
+Connection ~ 1800 4450
+Text GLabel 2800 4900 2    50   Input ~ 0
+MAP3_SIG
+$Comp
+L Device:C_Small C6
+U 1 1 5FC084A3
+P 2250 5100
+F 0 "C6" H 2158 5054 50  0000 R CNN
+F 1 "47pF" H 2158 5145 50  0000 R CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2250 5100 50  0001 C CNN
+F 3 "~" H 2250 5100 50  0001 C CNN
+	1    2250 5100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5FC084A9
+P 2650 5100
+F 0 "R4" H 2720 5146 50  0000 L CNN
+F 1 "51K" H 2720 5055 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2580 5100 50  0001 C CNN
+F 3 "~" H 2650 5100 50  0001 C CNN
+	1    2650 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 4900 2250 4900
+Wire Wire Line
+	2650 4950 2650 4900
+Connection ~ 2650 4900
+Wire Wire Line
+	2650 4900 2800 4900
+Wire Wire Line
+	2250 5000 2250 4900
+Connection ~ 2250 4900
+Wire Wire Line
+	2250 4900 2650 4900
+Wire Wire Line
+	2250 5200 2250 5300
+Wire Wire Line
+	2250 5300 1800 5300
+Connection ~ 1800 5300
+Wire Wire Line
+	1800 5300 1800 5350
+Wire Wire Line
+	2650 5300 2250 5300
+Connection ~ 2250 5300
+Wire Wire Line
+	2650 5250 2650 5300
+Text Notes 1250 7400 0    50   ~ 0
+CYL #4 PRESSURE SENSOR
+$Comp
+L Sensor_Pressure:MPXA6115A U5
+U 1 1 5FC0A577
+P 1800 6650
+F 0 "U5" H 1370 6696 50  0000 R CNN
+F 1 "MPXA6115A" H 1370 6605 50  0000 R CNN
+F 2 "SamacSys_Parts:98ASB17757C" H 1300 6300 50  0001 C CNN
+F 3 "http://www.nxp.com/files/sensors/doc/data_sheet/MPXA6115A.pdf" H 1800 7250 50  0001 C CNN
+	1    1800 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0118
+U 1 1 5FC0A57D
+P 1800 7100
+F 0 "#PWR0118" H 1800 6850 50  0001 C CNN
+F 1 "Earth" H 1800 6950 50  0001 C CNN
+F 2 "" H 1800 7100 50  0001 C CNN
+F 3 "~" H 1800 7100 50  0001 C CNN
+	1    1800 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 6950 1800 7050
+$Comp
+L power:+5V #PWR0119
+U 1 1 5FC0A584
+P 1800 6150
+F 0 "#PWR0119" H 1800 6000 50  0001 C CNN
+F 1 "+5V" H 1815 6323 50  0000 C CNN
+F 2 "" H 1800 6150 50  0001 C CNN
+F 3 "" H 1800 6150 50  0001 C CNN
+	1    1800 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C7
+U 1 1 5FC0A58A
+P 1450 6200
+F 0 "C7" V 1221 6200 50  0000 C CNN
+F 1 "100nF" V 1312 6200 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1450 6200 50  0001 C CNN
+F 3 "~" H 1450 6200 50  0001 C CNN
+	1    1450 6200
+	0    1    1    0   
+$EndComp
+$Comp
+L power:Earth #PWR0120
+U 1 1 5FC0A590
+P 1250 6250
+F 0 "#PWR0120" H 1250 6000 50  0001 C CNN
+F 1 "Earth" H 1250 6100 50  0001 C CNN
+F 2 "" H 1250 6250 50  0001 C CNN
+F 3 "~" H 1250 6250 50  0001 C CNN
+	1    1250 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 6250 1250 6200
+Wire Wire Line
+	1250 6200 1350 6200
+Wire Wire Line
+	1550 6200 1800 6200
+Wire Wire Line
+	1800 6200 1800 6150
+Wire Wire Line
+	1800 6200 1800 6350
+Connection ~ 1800 6200
+Text GLabel 2800 6650 2    50   Input ~ 0
+MAP4_SIG
+$Comp
+L Device:C_Small C8
+U 1 1 5FC0A59D
+P 2250 6850
+F 0 "C8" H 2158 6804 50  0000 R CNN
+F 1 "47pF" H 2158 6895 50  0000 R CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2250 6850 50  0001 C CNN
+F 3 "~" H 2250 6850 50  0001 C CNN
+	1    2250 6850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5FC0A5A3
+P 2650 6850
+F 0 "R5" H 2720 6896 50  0000 L CNN
+F 1 "51K" H 2720 6805 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2580 6850 50  0001 C CNN
+F 3 "~" H 2650 6850 50  0001 C CNN
+	1    2650 6850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 6650 2250 6650
+Wire Wire Line
+	2650 6700 2650 6650
+Connection ~ 2650 6650
+Wire Wire Line
+	2650 6650 2800 6650
+Wire Wire Line
+	2250 6750 2250 6650
+Connection ~ 2250 6650
+Wire Wire Line
+	2250 6650 2650 6650
+Wire Wire Line
+	2250 6950 2250 7050
+Wire Wire Line
+	2250 7050 1800 7050
+Connection ~ 1800 7050
+Wire Wire Line
+	1800 7050 1800 7100
+Wire Wire Line
+	2650 7050 2250 7050
+Connection ~ 2250 7050
+Wire Wire Line
+	2650 7000 2650 7050
+$Comp
+L Amplifier_Operational:LMV324 U6
+U 1 1 5FC0E01B
+P 5950 2000
+F 0 "U6" H 5950 2367 50  0000 C CNN
+F 1 "LMV324" H 5950 2276 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 5900 2100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lmv324.pdf" H 6000 2200 50  0001 C CNN
+	1    5950 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LMV324 U6
+U 2 1 5FC0E110
+P 5950 2750
+F 0 "U6" H 5950 3117 50  0000 C CNN
+F 1 "LMV324" H 5950 3026 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 5900 2850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lmv324.pdf" H 6000 2950 50  0001 C CNN
+	2    5950 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LMV324 U6
+U 3 1 5FC0E17D
+P 5950 3500
+F 0 "U6" H 5950 3867 50  0000 C CNN
+F 1 "LMV324" H 5950 3776 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 5900 3600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lmv324.pdf" H 6000 3700 50  0001 C CNN
+	3    5950 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LMV324 U6
+U 4 1 5FC0E1F4
+P 5950 4200
+F 0 "U6" H 5950 4567 50  0000 C CNN
+F 1 "LMV324" H 5950 4476 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 5900 4300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lmv324.pdf" H 6000 4400 50  0001 C CNN
+	4    5950 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LMV324 U6
+U 5 1 5FC0E27D
+P 7400 2800
+F 0 "U6" H 7358 2846 50  0000 L CNN
+F 1 "LMV324" H 7358 2755 50  0000 L CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 7350 2900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lmv324.pdf" H 7450 3000 50  0001 C CNN
+	5    7400 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0121
+U 1 1 5FC1158C
+P 7300 3200
+F 0 "#PWR0121" H 7300 2950 50  0001 C CNN
+F 1 "Earth" H 7300 3050 50  0001 C CNN
+F 2 "" H 7300 3200 50  0001 C CNN
+F 3 "~" H 7300 3200 50  0001 C CNN
+	1    7300 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0122
+U 1 1 5FC115CD
+P 7300 2400
+F 0 "#PWR0122" H 7300 2250 50  0001 C CNN
+F 1 "+5V" H 7315 2573 50  0000 C CNN
+F 2 "" H 7300 2400 50  0001 C CNN
+F 3 "" H 7300 2400 50  0001 C CNN
+	1    7300 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 2400 7300 2500
+Wire Wire Line
+	7300 3100 7300 3200
+Text Notes 9200 4950 0    50   ~ 0
+SYNC CONNECTOR
+Text GLabel 5550 1900 0    50   Input ~ 0
+MAP1_SIG
+Text GLabel 5550 2650 0    50   Input ~ 0
+MAP2_SIG
+Text GLabel 5550 3400 0    50   Input ~ 0
+MAP3_SIG
+Text GLabel 5550 4100 0    50   Input ~ 0
+MAP4_SIG
+Wire Wire Line
+	5550 1900 5650 1900
+Wire Wire Line
+	5550 2650 5650 2650
+Wire Wire Line
+	5550 3400 5650 3400
+Wire Wire Line
+	5550 4100 5650 4100
+$Comp
+L Device:R R6
+U 1 1 5FC36A31
+P 6900 1350
+F 0 "R6" H 6970 1396 50  0000 L CNN
+F 1 "1K" H 6970 1305 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 6830 1350 50  0001 C CNN
+F 3 "~" H 6900 1350 50  0001 C CNN
+	1    6900 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0123
+U 1 1 5FC36F55
+P 6900 1150
+F 0 "#PWR0123" H 6900 1000 50  0001 C CNN
+F 1 "+5V" H 6915 1323 50  0000 C CNN
+F 2 "" H 6900 1150 50  0001 C CNN
+F 3 "" H 6900 1150 50  0001 C CNN
+	1    6900 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 1150 6900 1200
+Wire Wire Line
+	6900 1500 6900 1550
+Wire Wire Line
+	6900 1550 5050 1550
+Wire Wire Line
+	5050 1550 5050 2100
+Wire Wire Line
+	5050 2100 5650 2100
+Wire Wire Line
+	5050 2100 5050 2850
+Wire Wire Line
+	5050 2850 5650 2850
+Connection ~ 5050 2100
+Wire Wire Line
+	5050 2850 5050 3600
+Wire Wire Line
+	5050 3600 5650 3600
+Connection ~ 5050 2850
+Wire Wire Line
+	5050 3600 5050 4300
+Wire Wire Line
+	5050 4300 5650 4300
+Connection ~ 5050 3600
+$Comp
+L User_Library:Toshiba_1SS308 D1
+U 1 1 5FC57E96
+P 6550 2000
+F 0 "D1" H 6550 2215 50  0000 C CNN
+F 1 "Toshiba_1SS308" H 6550 2124 50  0000 C CNN
+F 2 "User Libraries:SOT-26-5" H 6550 1825 50  0001 C CNN
+F 3 "http://rohmfs.rohm.com/en/products/databook/datasheet/discrete/diode/switching/ump11n.pdf" H 6550 2100 50  0001 C CNN
+	1    6550 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L User_Library:Toshiba_1SS308 D1
+U 2 1 5FC591C3
+P 6550 2750
+F 0 "D1" H 6550 2965 50  0000 C CNN
+F 1 "Toshiba_1SS308" H 6550 2874 50  0000 C CNN
+F 2 "User Libraries:SOT-26-5" H 6550 2575 50  0001 C CNN
+F 3 "http://rohmfs.rohm.com/en/products/databook/datasheet/discrete/diode/switching/ump11n.pdf" H 6550 2850 50  0001 C CNN
+	2    6550 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L User_Library:Toshiba_1SS308 D1
+U 3 1 5FC59772
+P 6550 3500
+F 0 "D1" H 6550 3715 50  0000 C CNN
+F 1 "Toshiba_1SS308" H 6550 3624 50  0000 C CNN
+F 2 "User Libraries:SOT-26-5" H 6550 3325 50  0001 C CNN
+F 3 "http://rohmfs.rohm.com/en/products/databook/datasheet/discrete/diode/switching/ump11n.pdf" H 6550 3600 50  0001 C CNN
+	3    6550 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L User_Library:Toshiba_1SS308 D1
+U 4 1 5FC598E6
+P 6550 4200
+F 0 "D1" H 6550 4415 50  0000 C CNN
+F 1 "Toshiba_1SS308" H 6550 4324 50  0000 C CNN
+F 2 "User Libraries:SOT-26-5" H 6550 4025 50  0001 C CNN
+F 3 "http://rohmfs.rohm.com/en/products/databook/datasheet/discrete/diode/switching/ump11n.pdf" H 6550 4300 50  0001 C CNN
+	4    6550 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 4200 6400 4200
+Wire Wire Line
+	6250 3500 6400 3500
+Wire Wire Line
+	6250 2750 6400 2750
+Wire Wire Line
+	6250 2000 6400 2000
+Wire Wire Line
+	6900 1550 6900 2000
+Wire Wire Line
+	6900 2000 6700 2000
+Connection ~ 6900 1550
+Wire Wire Line
+	6900 2000 6900 2750
+Wire Wire Line
+	6900 2750 6700 2750
+Connection ~ 6900 2000
+Wire Wire Line
+	6900 2750 6900 3500
+Wire Wire Line
+	6900 3500 6700 3500
+Connection ~ 6900 2750
+Wire Wire Line
+	6900 3500 6900 4200
+Wire Wire Line
+	6900 4200 6700 4200
+Connection ~ 6900 3500
+Text Notes 5500 4600 0    50   ~ 0
+MIN VOLTAGE FILTER
+Text GLabel 7150 1550 2    50   Input ~ 0
+MAP_SIG
+Wire Wire Line
+	6900 1550 7150 1550
+$Comp
+L Connector_Generic:Conn_01x06 J3
+U 1 1 5FC4C222
+P 9600 4400
+F 0 "J3" H 9679 4392 50  0000 L CNN
+F 1 "SYNC_CONN" H 9679 4301 50  0000 L CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_2x03_Pitch2.00mm" H 9600 4400 50  0001 C CNN
+F 3 "~" H 9600 4400 50  0001 C CNN
+	1    9600 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0112
+U 1 1 5FC51600
+P 1800 2700
+F 0 "#PWR0112" H 1800 2550 50  0001 C CNN
+F 1 "+5V" H 1815 2873 50  0000 C CNN
+F 2 "" H 1800 2700 50  0001 C CNN
+F 3 "" H 1800 2700 50  0001 C CNN
+	1    1800 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0113
+U 1 1 5FC518EB
+P 1800 3650
+F 0 "#PWR0113" H 1800 3400 50  0001 C CNN
+F 1 "Earth" H 1800 3500 50  0001 C CNN
+F 2 "" H 1800 3650 50  0001 C CNN
+F 3 "~" H 1800 3650 50  0001 C CNN
+	1    1800 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5FC51C85
+P 3650 2300
+F 0 "#FLG0101" H 3650 2375 50  0001 C CNN
+F 1 "PWR_FLAG" H 3650 2474 50  0000 C CNN
+F 2 "" H 3650 2300 50  0001 C CNN
+F 3 "~" H 3650 2300 50  0001 C CNN
+	1    3650 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5FC51DB7
+P 4050 2250
+F 0 "#FLG0102" H 4050 2325 50  0001 C CNN
+F 1 "PWR_FLAG" H 4050 2423 50  0000 C CNN
+F 2 "" H 4050 2250 50  0001 C CNN
+F 3 "~" H 4050 2250 50  0001 C CNN
+	1    4050 2250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR0124
+U 1 1 5FC51E42
+P 4050 2250
+F 0 "#PWR0124" H 4050 2100 50  0001 C CNN
+F 1 "+5V" H 4065 2423 50  0000 C CNN
+F 2 "" H 4050 2250 50  0001 C CNN
+F 3 "" H 4050 2250 50  0001 C CNN
+	1    4050 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0125
+U 1 1 5FC51E8D
+P 3650 2300
+F 0 "#PWR0125" H 3650 2050 50  0001 C CNN
+F 1 "Earth" H 3650 2150 50  0001 C CNN
+F 2 "" H 3650 2300 50  0001 C CNN
+F 3 "~" H 3650 2300 50  0001 C CNN
+	1    3650 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5FC5275A
+P 9400 1300
+F 0 "R7" H 9470 1346 50  0000 L CNN
+F 1 "3.9K" H 9470 1255 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 9330 1300 50  0001 C CNN
+F 3 "~" H 9400 1300 50  0001 C CNN
+	1    9400 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5FC528F0
+P 9400 1700
+F 0 "R8" H 9470 1746 50  0000 L CNN
+F 1 "5.9K" H 9470 1655 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 9330 1700 50  0001 C CNN
+F 3 "~" H 9400 1700 50  0001 C CNN
+	1    9400 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 1050 9400 1150
+Wire Wire Line
+	9400 1450 9400 1500
+Wire Wire Line
+	9400 1500 9700 1500
+Connection ~ 9400 1500
+Wire Wire Line
+	9400 1500 9400 1550
+Wire Wire Line
+	9400 1850 9400 1950
+$Comp
+L power:+5V #PWR?
+U 1 1 5FC5AE66
+P 9100 4800
+F 0 "#PWR?" H 9100 4650 50  0001 C CNN
+F 1 "+5V" H 9115 4973 50  0000 C CNN
+F 2 "" H 9100 4800 50  0001 C CNN
+F 3 "" H 9100 4800 50  0001 C CNN
+	1    9100 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 4700 9400 4800
+Wire Wire Line
+	9400 4800 9100 4800
+$EndSCHEMATC
