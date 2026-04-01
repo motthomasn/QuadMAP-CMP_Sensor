@@ -14,3 +14,39 @@ consisting of a single pulse per engine cycle.
 ignore the engine phase signal once 720deg synchronisation has been achieved. This means that the signal only has to be reliable during starting and idle.
 
 The signals from all four pressure sensors are processed via LMV324 op-amps so that the output is always the minimum of the four individual signals. This ensures a more stable and reliable pressure signal for engine management.
+
+### Sensor Pinout
+
+Mating connector is JST JWPF 04R-JWPF-VSLE-S.
+
+| Pin # | Description |
+|:-----:|:------------|
+| 1 | CMP Signal |
+| 2 | GND |
+| 3 | +5V |
+| 4 | MAP Signal |
+
+
+## Breakout Details
+
+A breakout connector is also included to access the individual raw pressure sensors for diagnostics or possibly throttle body balancing. 
+
+**Wire gauge:**	0.35mm2  
+**Sheath:**		Raychem DR-25 1/4"  
+**Connector:**	DB9 Female. RS 765-9555  
+**Wire Length:**	570mm. Case to back of connector
+
+
+### Breakout Pinout
+
+| Pin # | Description |
+|:-----:|:------------|
+| 1 | map1 |
+| 2 | map2 |
+| 3 | map3 |
+| 4 | map4 |
+| 5 | GND |
+| 6 | N/C |
+| 7 | N/C |
+| 8 | N/C |
+| 9 | N/C |
