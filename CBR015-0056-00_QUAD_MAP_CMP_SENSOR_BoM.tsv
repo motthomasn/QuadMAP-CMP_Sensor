@@ -1,0 +1,27 @@
+Designation	Description	Value	Manufacturer	Part Number	Package	Supplier	Stock No. / Order Code	Purchased	Notes
+U1	Comparator	44μs, 30V	Texas Instruments	LM397MF/NOPB	SOT-23	Farnell	3118476	Y	
+U2	Pressure Sensor	15-115 kPa	NXP	MPXA6115AC6U		RS	719-1134	Y	
+U3	Pressure Sensor	15-115 kPa	NXP	MPXA6115AC6U		RS	719-1134		
+U4	Pressure Sensor	15-115 kPa	NXP	MPXA6115AC6U		RS	719-1134		
+U5	Pressure Sensor	15-115 kPa	NXP	MPXA6115AC6U		RS	719-1134		
+U6	Quad Op-Amp		Texas Instruments	LMV324QD	SOIC-14	RS	732-0910		
+J1	Connector	4 way male	JST	B04B-JWPF-SK-R		Farnell	1324127	Y	
+J2	Debug Connector	4 way male				RS			Only used to facilitate connection to oscilloscope for initial testing & debug. May be removed in later revisions
+J3	Sync Connector	5 way female							
+C1	Pressure sensor power smooth cap	100nF	AVX	08055C104KAT2A	805	RS	464-6688		
+C2	Pressure sensor output smooth cap	47pF	KEMET	C0805C470J5GACTU	805	RS	264-4270		
+C3	Pressure sensor power smooth cap	100nF	AVX	08055C104KAT2A	805	RS	464-6688		
+C4	Pressure sensor output smooth cap	47pF	KEMET	C0805C470J5GACTU	805	RS	264-4270		
+C5	Pressure sensor power smooth cap	100nF	AVX	08055C104KAT2A	805	RS	464-6688		
+C6	Pressure sensor output smooth cap	47pF	KEMET	C0805C470J5GACTU	805	RS	264-4270		
+C7	Pressure sensor power smooth cap	100nF	AVX	08055C104KAT2A	805	RS	464-6688		
+C8	Pressure sensor output smooth cap	47pF	KEMET	C0805C470J5GACTU	805	RS	264-4270		
+R1	Comparator output pull-up resistor	10K	TE Connectivity	CRG0805F10K	805	RS	223-0562		
+R2	Pressure sensor output filter resistor	51K	Vishay	CRCW080551K0FKEA	805	RS	679-1525		
+R3	Pressure sensor output filter resistor	51K	Vishay	CRCW080551K0FKEA	805	RS	679-1525		
+R4	Pressure sensor output filter resistor	51K	Vishay	CRCW080551K0FKEA	805	RS	679-1525		
+R5	Pressure sensor output filter resistor	51K	Vishay	CRCW080551K0FKEA	805	RS	679-1525		
+R6	Op-Amps Pull-Up Resistor	1K	Bourns	CR0805-FX-1001ELF	805	RS	740-8971		
+R7	Ref Voltage Divider	3.9K	TE Connectivity	CRG0805F3K9	805	RS	223-0506		
+R8	Ref Voltage Divider	5.9K	TE Connectivity	CPF0805B5K9E1	805	RS	123-3041		
+D1		Quad 80V 300mA Common Anode	Toshiba	1SS308(TE85L,F)	SOT-26	RS	579-604		
